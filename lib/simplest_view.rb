@@ -6,10 +6,12 @@ module SimplestView
   end
 
   def view_context_class_name
-    controller = self.class.name.sub(/Controller$/, "").underscore
-    action = action_name + "_view"
+    @_view_context_class_name ||= begin
+      controller = self.class.name.sub(/Controller$/, "").underscore
+      action = action_name + "_view"
 
-    File.join(controller, action).camelize
+      File.join(controller, action).camelize
+    end
   end
 
   # Rails 3/4
@@ -31,7 +33,7 @@ module SimplestView
         end
       end
     rescue NameError => e
-      Rails.logger.warn "No View defined for #{klass_name}"
+      Rails.logger.warn "No View defined for #{view_context_class_name}"
       super
     end
   end

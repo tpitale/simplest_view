@@ -25,6 +25,7 @@ Or install it yourself as:
 1. Inside of your `ApplicationController` or a specific controller: `include SimplestView`
 2. `mv app/views app/templates`
 3. mkdir app/views
+4. append `app/views` to the Rails `autoload_paths` inside of `application.rb`
 
 Inside of app/views, created directories for each of your controllers. Within each controller directory, create a view to match the actions in your controller.
 
