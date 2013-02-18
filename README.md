@@ -27,7 +27,7 @@ Or install it yourself as:
 3. mkdir app/views
 4. append `app/views` to the Rails `autoload_paths` inside of `application.rb`
 
-Inside of app/views, created directories for each of your controllers. Within each controller directory, create a view to match the actions in your controller.
+Inside of app/views, create directories for each of your controllers. Within each controller directory, create a view to match the actions in your controller.
 
 For a controller named PostsController with actions :index, :show, :edit you would create app/views/posts/index_view.rb, app/views/posts/show_view.rb, app/views/posts/edit_view.rb respectively.
 
