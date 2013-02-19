@@ -15,3 +15,18 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
+
+
+# Double happy asterisk star makes sure we
+# ignore the files in the dummy rails app too
+**.log
+**.sqlite3
+
+# Mac finder artifacts
+.DS_Store
+
+# Textmate project files
+/*.tmproj
+
+# vim artifacts
+**.swp
