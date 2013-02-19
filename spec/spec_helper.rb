@@ -1,6 +1,6 @@
 require 'bundler/setup'
 require 'simplest_view'
-# require 'action_controller'
+require 'action_controller'
 # require 'action_controller/test_case'
 
 RSpec.configure do |config|
