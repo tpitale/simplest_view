@@ -1,3 +1,7 @@
 class Posts::ShowView < ActionView::Base
-  @post = Post.find(params[:id])
+
+  def zambies string
+    string.gsub(/zambies/, 'ZAMBIES!!1')
+  end
+
 end

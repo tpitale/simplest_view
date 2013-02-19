@@ -16,5 +16,11 @@ app.start_server do
       page = app.get "/posts/1"
       page.should have_text "Posts Template: template/posts/show.html.erb"
     end
+
+    it "uses a view class to add decorator methods" do
+      page = app.get "/posts/1"
+      page.should have_text "ZAMBIES!!1"
+    end
+
   end
 end
