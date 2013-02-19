@@ -7,10 +7,7 @@ def run_in_dummy_app(command)
   raise "#{command} failed" unless success
 end
 
-task "default" => "ci"
-
-desc "Run all tests for CI"
-task "ci" => "spec"
+task "default" => "spec"
 
 desc "Run all specs"
 task "spec" => "spec:all"
