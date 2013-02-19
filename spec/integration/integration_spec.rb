@@ -3,10 +3,6 @@ require 'support/dummy_app'
 require 'support/matchers/have_text'
 
 app = DummyApp.new(ENV["RAILS_ENV"])
-spec_types = {
-  view: ["/posts", "PostsController"],
-  view: ["/posts/1", "PostsController"]
-}
 
 app.start_server do
   describe "simplest view in a rails dummy app" do
