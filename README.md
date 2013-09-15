@@ -4,8 +4,6 @@ SimplestView splits up views and templates in a Rails 3 application to make it e
 This happens by replacing the anonymous class that inherits from ActionView::Base with your own view class.
 This view class becomes the context within your existing rails templates.
 
-_WARNING: Do not move mailer views into app/templates, they will not render._
-
 _CAVEAT EMPTOR: Works with rails 3, but lacking specs._
 
 ## Installation
@@ -25,13 +23,16 @@ Or install it yourself as:
 ## Usage
 
 1. Inside of your `ApplicationController` or a specific controller: `include SimplestView`
-2. `mv app/views app/templates` (you will need to move mailer views back into `app/views`!)
-3. mkdir app/views
-4. append `app/views` to the Rails `autoload_paths` inside of `application.rb`
+2. Inside of any Mailers you have (inherited from ActionMailer::Base): `include SimplestView`
+3. `mv app/views app/templates`
+4. mkdir app/views
+5. append `app/views` to the Rails `autoload_paths` inside of `application.rb`
 
-Inside of app/views, created directories for each of your controllers. Within each controller directory, create a view to match the actions in your controller.
+### To Add a View ###
 
-For a controller named PostsController with actions :index, :show, :edit you would create app/views/posts/index_view.rb, app/views/posts/show_view.rb, app/views/posts/edit_view.rb respectively.
+Inside of `app/views`, create directories for your controllers. Within each controller directory, create a view to match the actions in your controller.
+
+For a controller named PostsController with actions :index, :show, :edit you could create app/views/posts/index_view.rb, app/views/posts/show_view.rb, app/views/posts/edit_view.rb respectively.
 
 Then, create your view by inheriting from ActionView::Base:
 
