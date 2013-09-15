@@ -4,6 +4,8 @@ SimplestView splits up views and templates in a Rails 3 application to make it e
 This happens by replacing the anonymous class that inherits from ActionView::Base with your own view class.
 This view class becomes the context within your existing rails templates.
 
+_WARNING: Do not move mailer views into app/templates, they will not render._
+
 _CAVEAT EMPTOR: Works with rails 3, but lacking specs._
 
 ## Installation
@@ -23,7 +25,7 @@ Or install it yourself as:
 ## Usage
 
 1. Inside of your `ApplicationController` or a specific controller: `include SimplestView`
-2. `mv app/views app/templates`
+2. `mv app/views app/templates` (you will need to move mailer views back into `app/views`!)
 3. mkdir app/views
 4. append `app/views` to the Rails `autoload_paths` inside of `application.rb`
 
