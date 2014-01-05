@@ -37,13 +37,42 @@ For a controller named PostsController with actions :index, :show, :edit you cou
 Then, create your view by inheriting from ActionView::Base:
 
 ```
-class IndexView < ActionView::Base
+class Posts::IndexView < ActionView::Base
 end
 ```
 
 Any methods defined within will be accessible from your matching templates at app/templates/posts/index.html.erb, etc.
 
 _NOTE: If you do not create a view class, the default rails behavior will continue to work as always!_
+
+### Handling `new` & `create` ###
+
+If you have a `new` action in the `PostsController`, like so:
+
+```
+def new
+end
+```
+
+This will implicitly render the `app/templates/posts/new.html.erb` template, and will look for the view inside `app/views/posts/new_view.rb`.
+
+If you also have a `create` action:
+
+```
+def create
+  if post.save
+    redirect_to ...
+  else
+    render :new
+  end
+end
+```
+
+When this attempts to render the `new` template, it will _not_ try to look for a view inside `app/views/posts/new_view.rb` because we are only rendering the `new` template, but we are inside of the `create` action still. Put your view inside of `app/views/posts/create_view.rb`.
+
+If the views are exactly the same, I have simply made the constants equal, like so: `Posts::CreateView = Posts::NewView`.
+
+This will apply to any template and view that you render from another action. Another common example is `edit`/`update`.
 
 ## TODO
 
