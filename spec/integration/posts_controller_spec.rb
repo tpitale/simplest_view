@@ -15,4 +15,13 @@ describe PostsController do
     end
   end
 
+  context "in the create action" do
+    before(:each) do
+      controller.stubs(:action_name).returns("create")
+    end
+
+    it 'does not error for a missing view class' do
+      expect {controller.view_context_class}.to_not raise_error
+    end
+  end
 end
