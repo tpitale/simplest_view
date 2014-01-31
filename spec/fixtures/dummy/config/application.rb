@@ -1,7 +1,7 @@
 require "action_controller/railtie"
 
-# Load Staccato Rails
-require File.expand_path('../../../../../lib/staccato-rails', __FILE__)
+# Load SimplestView
+require File.expand_path('../../../../../lib/simplest_view', __FILE__)
 
 module Dummy
   class Application < Rails::Application
