@@ -4,7 +4,9 @@ SimplestView splits up views and templates in a Rails 3 application to make it e
 This happens by replacing the anonymous class that inherits from ActionView::Base with your own view class.
 This view class becomes the context within your existing rails templates.
 
-_CAVEAT EMPTOR: Works with rails 3, but lacking specs._
+[![Build Status](https://travis-ci.org/tpitale/simplest_view.png?branch=master)](https://travis-ci.org/tpitale/simplest_view)
+[![Code Climate](https://codeclimate.com/github/tpitale/simplest_view.png)](https://codeclimate.com/github/tpitale/simplest_view)
+
 
 ## Installation
 
