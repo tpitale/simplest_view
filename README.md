@@ -12,7 +12,9 @@ This view class becomes the context within your existing rails templates.
 
 Add this line to your application's Gemfile:
 
-    gem 'simplest_view'
+```ruby
+gem 'simplest_view'
+```
 
 And then execute:
 
@@ -38,7 +40,7 @@ For a controller named PostsController with actions :index, :show, :edit you cou
 
 Then, create your view by inheriting from ActionView::Base:
 
-```
+```ruby
 class Posts::IndexView < ActionView::Base
 end
 ```
@@ -51,7 +53,7 @@ _NOTE: If you do not create a view class, the default rails behavior will contin
 
 If you have a `new` action in the `PostsController`, like so:
 
-```
+```ruby
 def new
 end
 ```
@@ -60,7 +62,7 @@ This will implicitly render the `app/templates/posts/new.html.erb` template, and
 
 If you also have a `create` action:
 
-```
+```ruby
 def create
   if post.save
     redirect_to ...
