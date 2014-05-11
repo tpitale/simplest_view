@@ -1,8 +1,9 @@
 # SimplestView
 
-SimplestView splits up views and templates in a Rails 3 application to make it easier to improve the code quality therein.
-This happens by replacing the anonymous class that inherits from ActionView::Base with your own view class.
-This view class becomes the context within your existing rails templates.
+SimplestView splits up Views and Templates (erb/haml/etc) in a Rails 3/4 application to make it easier to improve the code quality of our controllers, and remove code from helper modules.
+
+This is accomplished by replacing the *anonymous* class that inherits from ActionView::Base with your own view class.
+This view class becomes the context within your existing Rails Templates.
 
 [![Build Status](https://travis-ci.org/tpitale/simplest_view.png?branch=master)](https://travis-ci.org/tpitale/simplest_view)
 [![Code Climate](https://codeclimate.com/github/tpitale/simplest_view.png)](https://codeclimate.com/github/tpitale/simplest_view)
