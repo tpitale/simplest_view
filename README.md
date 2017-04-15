@@ -5,8 +5,12 @@ SimplestView splits up Views and Templates (erb/haml/etc) in a Rails 3/4 applica
 This is accomplished by replacing the *anonymous* class that inherits from ActionView::Base with your own view class.
 This view class becomes the context within your existing Rails Templates.
 
-[![Build Status](https://travis-ci.org/tpitale/simplest_view.png?branch=master)](https://travis-ci.org/tpitale/simplest_view)
-[![Code Climate](https://codeclimate.com/github/tpitale/simplest_view.png)](https://codeclimate.com/github/tpitale/simplest_view)
+  - [![Version](https://badge.fury.io/rb/simplest_view.png)](https://rubygems.org/gems/simplest_view)
+  - [![Climate](https://codeclimate.com/github/tpitale/simplest_view.png)](https://codeclimate.com/github/tpitale/simplest_view)
+  - [![Build](http://img.shields.io/travis-ci/tpitale/simplest_view)](https://travis-ci.org/tpitale/simplest_view)
+  - [![Dependencies](https://gemnasium.com/tpitale/simplest_view.png)](https://gemnasium.com/tpitale/simplest_view)
+  - [![Coverage](http://img.shields.io/coveralls/tpitale/simplest_view.png)](https://coveralls.io/r/tpitale/simplest_view)
+  - [![License](http://img.shields.io/license/MIT.png?color=green)](http://opensource.org/licenses/MIT)
 
 
 ## Installation
